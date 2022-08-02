@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import {createRoot} from 'react-dom/client'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// import App from './components/Class'
+// import FuncApp from './components/Func'
+// import NestComponent from './components/Nest'
+// import Style from './components/Style'
+// import EventBindComponent from './components/EventBind2'
+// import Todolist from './components/Todolist'
+// import TabBar from './components/TabBar'
+// import SetState from './components/SetState'
+// import Props from './components/Props'
+// import List from './components/受控cinema'
+// import App from './components/父子通信/fathter'
+import Login from './components/父子通信-ref表单域组件/Login'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+createRoot(document.getElementById('root')).render(<Login/>)
