@@ -13,6 +13,7 @@ import {createRoot} from 'react-dom/client'
 // import List from './components/受控cinema'
 // import App from './components/父子通信/fathter'
 // import Login from './components/父子通信-ref表单域组件/Login'
-import Center from './components/非父子通信-状态提升/Center'
+// import Center from './components/非父子通信-状态提升/Center'
+import Sublist from './components/非父子通信-发布订阅模式'
 
-createRoot(document.getElementById('root')).render(<Center/>)
+createRoot(document.getElementById('root')).render(<Sublist/>)
