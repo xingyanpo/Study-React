@@ -76,7 +76,7 @@ class Detaile extends Component {
   }
   render() {
     return (
-      <div style={{width:'50%', height: '100%',background:'#FFF',position:'fixed', left: '0', top: '0'}}>{this.state.info}</div>
+      <div style={{width:'50%', height: '50%',background:'#FFF',position:'fixed', left: '0', bottom: '0',boxShadow: '3px -3px 5px #DDD'}}>{this.state.info}</div>
     )
   }
 }
