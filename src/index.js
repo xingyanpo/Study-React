@@ -15,6 +15,7 @@ import {createRoot} from 'react-dom/client'
 // import Login from './components/父子通信-ref表单域组件/Login'
 // import Center from './components/非父子通信-状态提升/Center'
 // import Sublish from './components/非父子通信-发布订阅模式/Center'
-import Context from './components/非父子通信-context'
+// import Context from './components/非父子通信-context'
+import Slot from './components/插槽'
 
-createRoot(document.getElementById('root')).render(<Context/>)
+createRoot(document.getElementById('root')).render(<Slot/>)
