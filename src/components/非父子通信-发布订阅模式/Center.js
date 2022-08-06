@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import BScroll from 'better-scroll'
 
 let vessel = {
   message: [],
@@ -22,6 +23,9 @@ export default class Center extends Component {
   }
   constructor() {
     super()
+    
+  }
+  componentDidMount() {
     axios({
       url: 'https://m.maizuo.com/gateway?cityId=310100&pageNum=1&pageSize=10&type=1&k=9424449',
       method: 'get',
@@ -35,17 +39,21 @@ export default class Center extends Component {
         lists: res.data.data.films
       },() => {
         setTimeout(() => {
-          // new BScroll('.wrapper-films')
+          // 
         },0)
       })
     })
-    
+   
+    console.log('dom已经挂载完成')
+  }
+  componentDidUpdate() {
+    new BScroll('.wrapper-films')
   }
   render() {
     return (
       <div>
         <div className='films'>
-          <div className='wrapper-films' style={{height:'100vh'}}>
+          <div className='wrapper-films' style={{height:'100%'}}>
             <div className='content'>
             {
           this.state.lists.map((item, index) => 
@@ -88,7 +96,7 @@ class Item extends Component {
         vessel.sublish(this.props.infomation)
         console.log(this.props.infomation, this.props)
       }}>
-        <img src={this.props.poster} style={{width: '40%'}}></img>
+        <img alt={this.props.name} src={this.props.poster} style={{width: '40%'}}></img>
         <div style={{padding:'5px',boxSizing: 'border-box'}}>
           <h4 >{this.props.name}<span style={{background:'#CCC',borderRadius:'4px', padding:'0 3px', marginLeft: '5px', color: '#666'}}>{this.props.filemType}</span></h4>
           {!!this.props.grade && <p>评分：{this.props.grade}分</p>}
