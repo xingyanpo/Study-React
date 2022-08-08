@@ -19,6 +19,6 @@ import {createRoot} from 'react-dom/client'
 // import Slot from './components/插槽'
 // import App from './components/生命周期函数/运行时'
 // import App from './components/生命周期函数/运行时2'
-import App from './components/生命周期函数/销毁'
+import App from './components/生命周期函数/新生命周期函数案例-2'
 
 createRoot(document.getElementById('root')).render(<App/>)
