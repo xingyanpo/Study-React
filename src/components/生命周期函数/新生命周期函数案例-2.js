@@ -11,6 +11,9 @@ export default class App extends Component {
         <h1>邮箱系统</h1>
         <button onClick={() => {
           console.log(this.listRef.current, this.listRef.current.scrollHeight)
+          this.setState({
+            list: [0, 0, 0, 0, 0, ...this.state.list]
+          })
         }}>接收邮件</button>
         <ul style={{height:'200px', overflow:'scroll', background: 'yellow'}} ref={this.listRef}>
           {
@@ -21,5 +24,12 @@ export default class App extends Component {
         </ul>
       </div>
     )
+  }
+  getSnapshotBeforeUpdate() {
+    return this.listRef.scrollHeight
+  }
+  componentDidUpdate(prevProps, prevState, value) {
+    console.log(this.listRef.current.scrollHeight)
+    this.listRef.current.scrollTop += this.listRef.current.scrollHeight - value
   }
 }
