@@ -21,6 +21,7 @@ import {createRoot} from 'react-dom/client'
 // import App from './components/生命周期函数/运行时2'
 // import App from './components/生命周期函数/新生命周期函数案例-2'
 // import App from './components/hooks/useState'
-import App from './components/hooks/useRef'
+// import App from './components/hooks/useRef'
+import App from './components/hooks/useContext'
 
 createRoot(document.getElementById('root')).render(<App/>)
