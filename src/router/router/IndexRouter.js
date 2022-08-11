@@ -13,5 +13,5 @@ export default function MyRouter() {
       <Route path='/me' component={Me}></Route>
     </HashRouter>
   )
-}
 
+}
