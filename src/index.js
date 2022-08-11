@@ -24,6 +24,7 @@ import {createRoot} from 'react-dom/client'
 // import App from './components/hooks/useRef'
 // import App from './components/hooks/useContext'
 // import App from './components/hooks/useReducer'
-import App from './components/hooks/useReducer-案例1'
+// import App from './components/hooks/useReducer-案例1'
+import App from './router/App'
 
 createRoot(document.getElementById('root')).render(<App/>)
