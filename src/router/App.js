@@ -5,7 +5,6 @@ import Tabbar from './components/Tabbar'
 export default function App() {
   return (
     <div>
-      
       <MyRouter>
         <Tabbar></Tabbar>
       </MyRouter>

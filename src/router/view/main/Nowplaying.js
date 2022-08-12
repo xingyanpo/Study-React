@@ -15,6 +15,7 @@ export default function Nowplaying(props) {
       setList(res.data.data.films)
   })
   }, [])
+  // 方法三 声明
   const history = useHistory()
   const detailHandle = (id) => {
     // 方法一 编程式
@@ -22,7 +23,12 @@ export default function Nowplaying(props) {
     // 方法二 声明式
     // props.history.push(`/detail/${id}`)
     // 方法三 引用router内置的useHistory方法
+    // 动态路由传参 方法一
     history.push(`/detail/${id}`)
+    // query传参 方法二
+    // history.push({pathname: '/detail', query: {myid: id}})
+    // state传参 方法三
+    // history.push({pathname:'/detail', state: {myid: id}})
   }
   return (
     <div>

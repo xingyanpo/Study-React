@@ -4,7 +4,7 @@ import './Tabbar.css'
 
 export default function Tabbar() {
   return (
-    <div>
+    <div className='main-tabbar'>
       <ul className='tabbar'>
         <li className='tabbar-item'><NavLink to='/main' activeClassName='tabbar-active'>首页</NavLink></li>
         <li className='tabbar-item'><NavLink to='/list' activeClassName='tabbar-active'>列表</NavLink></li>
