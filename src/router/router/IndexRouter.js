@@ -6,6 +6,11 @@ import List from '../view/List'
 import Me from '../view/Me'
 import NotFound from '../view/NotFound'
 import Detail from '../view/Detail'
+import Login from '../view/Login'
+
+function isAuth () {
+  return localStorage.getItem('token')
+}
 
 export default function MyRouter(props) {
   return (
@@ -14,7 +19,10 @@ export default function MyRouter(props) {
       <Switch>
         <Route path='/main' component={Main}></Route>
         <Route path='/list' component={List}></Route>
-        <Route path='/me' component={Me}></Route>
+        <Route path='/me' render={() => {
+          return isAuth() ? <Me/> :  <Redirect to='/Login' />
+        }}></Route>
+        <Route path='/login' component={Login}></Route>
         {/* 方法一 */}
         <Route path='/detail/:detailid' component={Detail}></Route>
         {/* 方法二、三 */}
