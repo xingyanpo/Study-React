@@ -6,9 +6,10 @@ import List from '../view/List'
 import Me from '../view/Me'
 import NotFound from '../view/NotFound'
 
-export default function MyRouter() {
+export default function MyRouter(props) {
   return (
     <HashRouter>
+      {props.children}
       <Switch>
         <Route path='/main' component={Main}></Route>
         <Route path='/list' component={List}></Route>

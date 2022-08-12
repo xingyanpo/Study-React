@@ -1,0 +1,4 @@
+.tabbar-active {color:#ff4b00;font-size: 20px;font-weight: 600;}
+.tabbar {display:flex;}
+.tabbar-item {flex:1;list-style: none;line-height: 60px;margin:0 50px;text-align:center;background-color: aquamarine;box-sizing: border-box;}
+.tabbar-item > a {width: 100%;display: block;}
