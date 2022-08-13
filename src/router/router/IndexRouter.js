@@ -9,6 +9,7 @@ import Detail from '../view/Detail'
 import Login from '../view/Login'
 
 function isAuth () {
+  console.log(!!localStorage.getItem('token'))
   return localStorage.getItem('token')
 }
 
@@ -20,9 +21,11 @@ export default function MyRouter(props) {
         <Route path='/main' component={Main}></Route>
         <Route path='/list' component={List}></Route>
         <Route path='/me' render={() => {
-          return isAuth() ? <Me/> :  <Redirect to='/Login' />
+          return isAuth() ? <Me/> : <Redirect to='/login' />
         }}></Route>
-        <Route path='/login' component={Login}></Route>
+        <Route path='/login' render={() => {
+          return isAuth() ? <Redirect to='/me' /> : <Login />
+        }}></Route>
         {/* 方法一 */}
         <Route path='/detail/:detailid' component={Detail}></Route>
         {/* 方法二、三 */}
