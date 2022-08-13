@@ -1,7 +1,14 @@
 import React from 'react'
+import {withRouter} from 'react-router-dom'
 
-export default function Me() {
+function Me(props) {
   return (
-    <div>Me</div>
+    <div>
+      <onclick onClick={() => {
+        props.history.push('/order_detail')
+      }}>查看订单</onclick>
+    </div>
   )
 }
+
+export default withRouter(Me)

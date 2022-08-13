@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, HashRouter, Switch, Redirect } from 'react-router-dom'
+import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
 
 import Main from '../view/Main'
 import List from '../view/List'
@@ -15,7 +15,7 @@ function isAuth () {
 
 export default function MyRouter(props) {
   return (
-    <HashRouter>
+    <Router>
       {props.children}
       <Switch>
         <Route path='/main' component={Main}></Route>
@@ -35,7 +35,7 @@ export default function MyRouter(props) {
 
         <Route component={NotFound}></Route>
       </Switch>
-    </HashRouter>
+    </Router>
   )
 
 }
