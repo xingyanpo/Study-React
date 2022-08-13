@@ -1,0 +1,10 @@
+body {margin: 0;padding: 0;}
+.info-from-background {width: 100%;height:100vh;background-image: url(./images/background.jpg);background-repeat: no-repeat;background-size: 100% 100%;display: flex;justify-content: center;align-items: flex-start;margin-bottom: 92px;}
+.info-from {margin-top: 30px;width:1000px;font-family: sans-serif;border-bottom: 1px solid rgba(255, 255, 255, 0.4);border-left: 1px solid rgba(255, 255, 255, 0.4);background: linear-gradient(to top right, rgba(90, 149, 207, 0.5), 10px 10px 20px rgba(255, 255, 255, 0.1));box-shadow: 10px -10px 20px rgba(0, 0, 0, 0.2), -10px 10px 20px rgba(255, 255, 255, 0.1);backdrop-filter: blur(20px);border-radius: 20px;}
+.inro-from-wrap {width: 70%;margin: auto;}
+.inro-from-wrap > h3 {text-align: center;font-size: 48px;color: #666;margin: 20px;}
+.info-name-title,.info-email-title,.info-message-title {display: block;line-height: 1.5;font-size: 26px;color: #777;}
+.info-name,.info-email,.info-message {border: none;display: block;width: 100%;border-radius: 6px;line-height: 40px;resize:none;margin-bottom: 20px;color:#444;padding:4px;}
+.info-name:focus,.info-email:focus,.info-message:focus {outline: none;}
+.info-submit {margin: auto;display: block;width: 100px;height: 40px;border-radius: 4px;border: none;font-size: 26px;color:#666;cursor: pointer;margin-bottom: 100px;}
+.info-submit:focus {color:#333;box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);}
