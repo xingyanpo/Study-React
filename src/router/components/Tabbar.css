@@ -1,5 +1,0 @@
-.tabbar-active {color:#ff4b00;font-size: 20px;font-weight: 600;}
-.tabbar {display:flex;}
-.tabbar-item {flex:1;list-style: none;line-height: 60px;margin:0 20px;text-align:center;background-color: aquamarine;box-sizing: border-box;}
-.tabbar-item > a {width: 100%;display: block;}
-.main-tabbar {position: fixed;bottom: 0;left: 0;right: 0;background-color: #FFF;box-shadow: 0 -5px 5px #EEE;z-index: 99;}

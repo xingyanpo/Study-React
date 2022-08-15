@@ -2,7 +2,7 @@ import React from 'react'
 import Comingsoon from './main/Comingsoon'
 import Nowplaying from './main/Nowplaying'
 
-import {Route, Redirect, Switch, NavLink} from 'react-router-dom'
+import {Route, Redirect, Switch, NavLink, NavLink} from 'react-router-dom'
 
 export default function Main() {
   return (
