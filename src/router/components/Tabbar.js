@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import style from './Tabbar.module.css'
 
 export default function Tabbar() {
-  console.log(style)
   return (
     <div className={style.maintabbar}>
       <ul className={style.tabbar}>

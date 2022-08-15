@@ -4,11 +4,11 @@ import Tabbar from './components/Tabbar'
 import store from './redux/store'
 
 export default function App() {
-  const [tabbarisshow,setTabbarisshow] = useState(store.getSate().show)
+  const [tabbarisshow,setTabbarisshow] = useState(store.getState().show)
   useEffect(() => {
     store.subscribe(() => {
-      console.log('app订阅', store.subscribe())
-      setTabbarisshow(store.subscribe().show)
+      console.log('app订阅', store.getState())
+      setTabbarisshow(store.getState().show)
     })
   }, [])
   return (
