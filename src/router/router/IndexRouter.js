@@ -7,6 +7,8 @@ import Me from '../view/Me'
 import NotFound from '../view/NotFound'
 import Detail from '../view/Detail'
 import Login from '../view/Login'
+import Cinemas from '../view/Cinemas'
+import City from '../view/City'
 
 function isAuth () {
   console.log(!!localStorage.getItem('token'))
@@ -20,6 +22,8 @@ export default function MyRouter(props) {
       <Switch>
         <Route path='/main' component={Main}></Route>
         <Route path='/list' component={List}></Route>
+        <Route path='/cinemas' component={Cinemas}></Route>
+        <Route path='/city' component={City}></Route>
         <Route path='/me' render={() => {
           return isAuth() ? <Me/> : <Redirect to='/login' />
         }}></Route>

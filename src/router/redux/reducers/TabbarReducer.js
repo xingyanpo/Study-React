@@ -1,8 +1,5 @@
-import {createStore, combineReducers} from 'redux'
-
-const reducer = (prevState={
-  show: true,
-  city: '北京'
+const TabbarReducer = (prevState={
+  show: true
 }, action) => {
   let newState = {...prevState}
   switch(action.type) {
@@ -12,13 +9,9 @@ const reducer = (prevState={
     case 'show':
       newState.show = true
       return newState
-    case 'city':
-      newState.city = action.cityName
-      return newState
     default :
     return prevState
   }
 }
 
-const store = createStore(reducer)
-export default store
+export default TabbarReducer
