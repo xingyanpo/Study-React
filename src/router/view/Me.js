@@ -15,9 +15,9 @@ function Me(props) {
   },[])
   return (
     <div>
-      <onclick onClick={() => {
+      <button onClick={() => {
         props.history.push('/order_detail')
-      }}>查看订单</onclick>
+      }}>查看订单</button>
       <div>
 
       </div>

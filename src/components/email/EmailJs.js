@@ -28,11 +28,11 @@ export default function ContactUs() {
       <form className='info-from' ref={form} onSubmit={sendEmail}>
         <div className='inro-from-wrap'>
           <h3>Input Your Info</h3>
-          <label className='info-name-title' for='user_name'>Name</label>
+          <label className='info-name-title' htmlFor='user_name'>Name</label>
           <input placeholder='please input your name' className='info-name' ref={name} type="text" id='user_name' name="user_name" />
-          <label className='info-email-title' for='user_email'>Email</label>
+          <label className='info-email-title' htmlFor='user_email'>Email</label>
           <input placeholder='please input your email' className='info-email' ref={email} type="email" id='user_email' name="user_email" />
-          <label className='info-message-title' for='message'>Message</label>
+          <label className='info-message-title' htmlFor='message'>Message</label>
           <textarea className='info-message' ref={message} id='message' name="message" />
           <input className='info-submit' type="submit" value="Send" />
         </div>

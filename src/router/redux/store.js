@@ -1,24 +1,16 @@
-import {createStore, combineReducers} from 'redux'
+import {createStore, combineReducers, applyMiddleware} from 'redux'
+import reduxThunk from 'redux-thunk'
+import CityReducer from './reducers/CityReducer'
+import TabbarReducer from './reducers/TabbarReducer'
+import CinemaListReducer from './reducers/CinemaListRouter'
 
-const reducer = (prevState={
-  show: true,
-  city: '北京'
-}, action) => {
-  let newState = {...prevState}
-  switch(action.type) {
-    case 'hide':
-      newState.show = false
-      return newState
-    case 'show':
-      newState.show = true
-      return newState
-    case 'city':
-      newState.city = action.cityName
-      return newState
-    default :
-    return prevState
-  }
-}
+const reducer = combineReducers({
+  CityReducer,
+  TabbarReducer,
+  CinemaListReducer
+})
 
-const store = createStore(reducer)
+
+
+const store = createStore(reducer, applyMiddleware(reduxThunk))
 export default store
