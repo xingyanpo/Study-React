@@ -7,18 +7,22 @@ export default class Cinemas extends Component {
     city: store.getState().CityReducer.city,
     cinemas: store.getState().CinemaListReducer.cinemas
   }
+  unsubscribe = null
   componentDidMount() {
     if (store.getState().CinemaListReducer.cinemas.length === 0){
       store.dispatch(CinemaListActionCreator())
     } else {
       console.log("store 缓存")
     }
-    store.subscribe(() => {
+     this.unsubscribe = store.subscribe(() => {
       console.log('cinema 订阅', store.getState().CinemaListReducer.cinemas)
       this.setState({
         cinemas: store.getState().CinemaListReducer.cinemas
       })
     })
+  }
+  componentWillUnmount () {
+    this.unsubscribe()
   }
   render() {
     return (
