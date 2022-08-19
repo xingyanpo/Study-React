@@ -1,5 +1,7 @@
 import React from 'react'
 import {createRoot} from 'react-dom/client'
+import { Provider } from 'react-redux/es/exports'
+import store from './react-redux/redux/store'
 
 // import App from './components/Class'
 // import FuncApp from './components/Func'
@@ -25,6 +27,6 @@ import {createRoot} from 'react-dom/client'
 // import App from './components/hooks/useContext'
 // import App from './components/hooks/useReducer'
 // import App from './components/hooks/useReducer-案例1'
-import App from './router/App'
+import App from './react-redux/App'
 
-createRoot(document.getElementById('root')).render(<App/>)
+createRoot(document.getElementById('root')).render(<Provider store={store}><App/></Provider>)
