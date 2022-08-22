@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import store from '../redux/store'
+import {store} from '../redux/store'
 
 export default class City extends Component {
   state = {

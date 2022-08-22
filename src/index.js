@@ -1,7 +1,8 @@
 import React from 'react'
 import {createRoot} from 'react-dom/client'
-import { Provider } from 'react-redux/es/exports'
-import store from './react-redux/redux/store'
+// import { Provider } from 'react-redux/es/exports'
+// import {store, persistor} from './react-redux/redux/store'
+// import { PersistGate } from 'redux-persist/integration/react'
 
 // import App from './components/Class'
 // import FuncApp from './components/Func'
@@ -27,6 +28,8 @@ import store from './react-redux/redux/store'
 // import App from './components/hooks/useContext'
 // import App from './components/hooks/useReducer'
 // import App from './components/hooks/useReducer-案例1'
-import App from './react-redux/App'
+// import App from './react-redux/App'
+// createRoot(document.getElementById('root')).render(<Provider store={store}><PersistGate loading={null} persistor={persistor}><App/></PersistGate></Provider>)
 
-createRoot(document.getElementById('root')).render(<Provider store={store}><App/></Provider>)
+import App from './antd/antd的引入'
+createRoot(document.getElementById('root')).render(<App/>)
