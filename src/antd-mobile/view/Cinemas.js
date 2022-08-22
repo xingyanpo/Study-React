@@ -10,23 +10,23 @@ export default class Cinemas extends Component {
   }
   unsubscribe = null
   componentDidMount() {
-    if (store.getState().CinemaListReducer.cinemas.length === 0){
+    if (store.getState().CinemaListReducer.cinemas.length === 0) {
       store.dispatch(CinemaListActionCreator())
     } else {
       console.log("store 缓存")
     }
-     this.unsubscribe = store.subscribe(() => {
+    this.unsubscribe = store.subscribe(() => {
       this.setState({
         cinemas: store.getState().CinemaListReducer.cinemas
       })
     })
   }
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.unsubscribe()
   }
 
   left = (
-    <button style={{border:'none', backgroundColor:'unset'}} onClick={() => {
+    <button style={{ border: 'none', backgroundColor: 'unset' }} onClick={() => {
       this.props.history.push('/city')
     }}>{this.state.city}</button>
   )
@@ -34,11 +34,11 @@ export default class Cinemas extends Component {
   render() {
     return (
       <div>
-        <div style={{position:'sticky', top:'0', background:'#FFF', boxShadow:'0 3px 3px #eee'}}><NavBar back={null} left={this.left}>Cinemas</NavBar></div>
+        <div style={{ position: 'sticky', top: '0', background: '#FFF', boxShadow: '0 3px 3px #eee' }}><NavBar back={null} left={this.left}>Cinemas</NavBar></div>
         <div>
           {
-            this.state.cinemas.map((item, index) => 
-            <div key={item.name}>{item.name}</div>
+            this.state.cinemas.map((item, index) =>
+              <div key={item.name}>{item.name}</div>
             )
           }
         </div>
