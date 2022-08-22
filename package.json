@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.22.6",
+    "antd-mobile": "^5.22.0",
     "axios": "^0.27.2",
     "better-scroll": "^2.4.2",
     "http-proxy-middleware": "^2.0.6",

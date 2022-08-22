@@ -31,5 +31,9 @@ import {createRoot} from 'react-dom/client'
 // import App from './react-redux/App'
 // createRoot(document.getElementById('root')).render(<Provider store={store}><PersistGate loading={null} persistor={persistor}><App/></PersistGate></Provider>)
 
-import App from './antd/antd的引入'
+// import App from './antd/antd的引入'
+// createRoot(document.getElementById('root')).render(<App/>)
+
+
+import App from './antd-mobile/App'
 createRoot(document.getElementById('root')).render(<App/>)
