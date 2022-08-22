@@ -1,6 +1,7 @@
 import store from '../redux/store'
 import React, { Component } from 'react'
 import CinemaListActionCreator from '../redux/actionCreator/CinemaListActionCreator'
+import { NavBar } from 'antd-mobile'
 
 export default class Cinemas extends Component {
   state = {
@@ -23,12 +24,17 @@ export default class Cinemas extends Component {
   componentWillUnmount () {
     this.unsubscribe()
   }
+
+  left = (
+    <button style={{border:'none', backgroundColor:'unset'}} onClick={() => {
+      this.props.history.push('/city')
+    }}>{this.state.city}</button>
+  )
+
   render() {
     return (
       <div>
-        <button onClick={() => {
-          this.props.history.push('/city')
-        }}>{this.state.city}</button>
+        <div style={{position:'sticky', top:'0', background:'#FFF', boxShadow:'0 3px 3px #eee'}}><NavBar back={null} left={this.left}>Cinemas</NavBar></div>
         <div>
           {
             this.state.cinemas.map((item, index) => 
