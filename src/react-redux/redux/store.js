@@ -1,4 +1,4 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
 import reduxThunk from 'redux-thunk'
 import CityReducer from './reducers/CityReducer'
 import TabbarReducer from './reducers/TabbarReducer'
@@ -23,7 +23,7 @@ const reducer = combineReducers({
 const persistedReducer = persistReducer(persistConfig, reducer)
 
 
-const store = createStore(persistedReducer,applyMiddleware(reduxThunk, reduxPromise))
+const store = createStore(persistedReducer, applyMiddleware(reduxThunk, reduxPromise))
 let persistor = persistStore(store)
 
-export {store,persistor}
+export { store, persistor }

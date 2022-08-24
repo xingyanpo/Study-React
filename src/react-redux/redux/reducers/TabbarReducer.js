@@ -1,14 +1,16 @@
+import { fromJS } from "immutable"
+
 const TabbarReducer = (prevState={
   show: true
 }, action) => {
-  let newState = {...prevState}
+  const newState = fromJS(prevState)
   switch(action.type) {
     case 'hide':
-      newState.show = false
-      return newState
+      newState.get('show', false)
+      return newState.toJS()
     case 'show':
-      newState.show = true
-      return newState
+      newState.get('show', true)
+      return newState.toJS()
     default :
     return prevState
   }

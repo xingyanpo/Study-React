@@ -4,10 +4,10 @@ import { fromJS } from 'immutable'
 export default class App extends Component {
   state = {
     info: fromJS({
-      name: 'zhangsan', 
+      name: 'zhangsan',
       location: {
         province: '浙江',
-        city:'杭州'
+        city: '杭州'
       },
       favor: ['吃饭', '睡觉', '学习']
     })
@@ -26,11 +26,11 @@ export default class App extends Component {
           this.state.info.get('favor').map((item, index) =>
             <p key={index}>{item} <button onClick={() => {
               this.setState({
-                info: this.state.info.updateIn(['favor'], (list) =>list.splice(index, 1))
+                info: this.state.info.updateIn(['favor'], (list) => list.splice(index, 1))
               })
             }}>delete</button></p>
           )
-          }</div>
+        }</div>
       </div>
     )
   }

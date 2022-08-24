@@ -37,5 +37,7 @@ import {createRoot} from 'react-dom/client'
 
 // import App from './antd-mobile/App'
 // import App from './immutable/BaseUse'
-import App from './immutable/信息案例'
+// import App from './immutable/信息案例'
+// import App from './mobx/App'
+import App from  './mobx/router-mobx/App'
 createRoot(document.getElementById('root')).render(<App/>)
