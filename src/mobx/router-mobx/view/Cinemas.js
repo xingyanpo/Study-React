@@ -1,38 +1,20 @@
-import store from '../redux/store'
 import React, { Component } from 'react'
-import CinemaListActionCreator from '../redux/actionCreator/CinemaListActionCreator'
+import {inject, observer} from 'mobx-react'
 
-export default class Cinemas extends Component {
-  state = {
-    city: store.getState().CityReducer.city,
-    cinemas: store.getState().CinemaListReducer.cinemas
-  }
-  unsubscribe = null
-  componentDidMount() {
-    if (store.getState().CinemaListReducer.cinemas.length === 0){
-      store.dispatch(CinemaListActionCreator())
-    } else {
-      console.log("store 缓存")
+@inject('store')
+@observer
+class Cinemas extends Component {
+  componentDidMount () {
+    if (this.props.store.list.length === 0) {
+      this.props.store.getList()
     }
-     this.unsubscribe = store.subscribe(() => {
-      console.log('cinema 订阅', store.getState().CinemaListReducer.cinemas)
-      this.setState({
-        cinemas: store.getState().CinemaListReducer.cinemas
-      })
-    })
-  }
-  componentWillUnmount () {
-    this.unsubscribe()
   }
   render() {
     return (
       <div>
-        <button onClick={() => {
-          this.props.history.push('/city')
-        }}>{this.state.city}</button>
         <div>
           {
-            this.state.cinemas.map((item, index) => 
+            this.props.store.list.map((item, index) => 
             <div key={item.name}>{item.name}</div>
             )
           }
@@ -41,3 +23,5 @@ export default class Cinemas extends Component {
     )
   }
 }
+
+export default Cinemas

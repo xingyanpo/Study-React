@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client'
 // import { Provider } from 'react-redux/es/exports'
 // import {store, persistor} from './react-redux/redux/store'
 // import { PersistGate } from 'redux-persist/integration/react'
+import { Provider } from 'mobx-react'
 
 // import App from './components/Class'
 // import FuncApp from './components/Func'
@@ -40,4 +41,5 @@ import {createRoot} from 'react-dom/client'
 // import App from './immutable/信息案例'
 // import App from './mobx/App'
 import App from  './mobx/router-mobx/App'
-createRoot(document.getElementById('root')).render(<App/>)
+import store from './mobx/router-mobx/mobx/store'
+createRoot(document.getElementById('root')).render(<Provider store={store}><App/></Provider>)
