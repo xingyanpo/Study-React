@@ -36,10 +36,11 @@ import { Provider } from 'mobx-react'
 // createRoot(document.getElementById('root')).render(<App/>)
 
 
-// import App from './antd-mobile/App'
+import App from './antd-mobile/App'
+createRoot(document.getElementById('root')).render(<App/>)
 // import App from './immutable/BaseUse'
 // import App from './immutable/信息案例'
 // import App from './mobx/App'
-import App from  './mobx/router-mobx/App'
-import store from './mobx/router-mobx/mobx/store'
-createRoot(document.getElementById('root')).render(<Provider store={store}><App/></Provider>)
+// import App from  './mobx/router-mobx/App'
+// import store from './mobx/router-mobx/mobx/store'
+// createRoot(document.getElementById('root')).render(<Provider store={store}><App/></Provider>)
