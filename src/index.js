@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client'
 // import { Provider } from 'react-redux/es/exports'
 // import {store, persistor} from './react-redux/redux/store'
 // import { PersistGate } from 'redux-persist/integration/react'
-import { Provider } from 'mobx-react'
+// import { Provider } from 'mobx-react'
 
 // import App from './components/Class'
 // import FuncApp from './components/Func'
@@ -36,7 +36,8 @@ import { Provider } from 'mobx-react'
 // createRoot(document.getElementById('root')).render(<App/>)
 
 
-import App from './antd-mobile/App'
+// import App from './antd-mobile/App'
+import App from './styled-components/04-动画'
 createRoot(document.getElementById('root')).render(<App/>)
 // import App from './immutable/BaseUse'
 // import App from './immutable/信息案例'
