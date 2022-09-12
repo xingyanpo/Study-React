@@ -38,6 +38,7 @@ import {createRoot} from 'react-dom/client'
 
 // import App from './antd-mobile/App'
 import App from './styled-components/04-动画'
+import './redux-saga/App'
 createRoot(document.getElementById('root')).render(<App/>)
 // import App from './immutable/BaseUse'
 // import App from './immutable/信息案例'
