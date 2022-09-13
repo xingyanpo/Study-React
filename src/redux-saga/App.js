@@ -13,7 +13,7 @@ export default class App extends Component {
           } else {
             console.log('缓存', store.getState().list1)
           }
-        }}></button>
+        }}>测试</button>
       </div>
     )
   }

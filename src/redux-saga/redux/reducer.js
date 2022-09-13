@@ -1,12 +1,13 @@
 function reducer(prevState = {
   list1: []
 }, action = {}) {
-  var newState = {...prevState}
-  switch(action.type) {
-    case 'change-list':
+  var newState = { ...prevState }
+  switch (action.type) {
+    case 'change-list1':
       newState.list1 = action.payload
-  default:
-    return prevState
+      return newState
+    default:
+      return prevState
   }
 }
 
