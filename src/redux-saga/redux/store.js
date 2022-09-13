@@ -1,10 +1,11 @@
 import {createStore, applyMiddleware} from 'redux'
 import reducer from './reducer'
-import createSagaMiddleware from '@redux-saga/core'
+import createSagaMiddleWare from 'redux-saga'
+import watchSaga from './saga'
 
-const SagaMiddleWare = createSagaMiddleware()
+const SagaMiddleleWare = createSagaMiddleWare()
 
-const store = createStore(reducer, applyMiddleware(SagaMiddleWare))
+const store = createStore(reducer, applyMiddleware(SagaMiddleleWare))
 
-SagaMiddleWare.run() // saga任务
+SagaMiddleleWare.run(watchSaga) // saga任务
 export default store
