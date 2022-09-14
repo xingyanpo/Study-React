@@ -14,6 +14,15 @@ export default class App extends Component {
             console.log('缓存', store.getState().list1)
           }
         }}>测试</button>
+        <button onClick={() => {
+          if(store.getState().list2.length === 0) {
+            store.dispatch({
+              type: 'get-list2'
+            })
+          } else {
+            console.log('缓存', store.getState().list2)
+          }
+        }}>测试2</button>
       </div>
     )
   }
