@@ -46,3 +46,8 @@ import {createRoot} from 'react-dom/client'
 // import App from  './mobx/router-mobx/App'
 // import store from './mobx/router-mobx/mobx/store'
 // createRoot(document.getElementById('root')).render(<Provider store={store}><App/></Provider>)
+
+// 补充
+// import App from './react-补充/forwordRef/App_forwardRef'
+import App from './react-补充/memo.js/App'
+createRoot(document.getElementById('root')).render(<App/>)
